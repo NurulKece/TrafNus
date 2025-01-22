@@ -1,0 +1,290 @@
+.root {
+  --primary: #038dc4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: none;
+  border-bottom: 1px solid rgb(240, 248, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navbar .logo span {
+  color: cadetblue;
+}
+
+.navbar .navbar-navi a {
+  color: dimgray;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-navi a:hover {
+  color: #333;
+}
+
+.navbar .navbar-navi a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #333;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-navi a:hover::after {
+  transform: scaleX(0.5);
+  transition: transform 0.3s;
+}
+
+.navbar .navbar-tambahan a {
+  color: dimgray;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-tambahan a:hover {
+  color: #333;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../foto/pilihan-penginapan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  text-align: center;
+  color: #fff;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: #038dc4;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #fff;
+}
+
+.destinasi .container {
+  padding: 8rem 7% 1.4rem;
+  text-align: center;
+}
+
+.destinasi .container img {
+  width: 50%;
+  border-radius: 0.5rem;
+}
+
+.destinasi .container ul p {
+  margin: 1rem 0 2rem;
+}
+
+.destinasi .container h2 {
+  margin-bottom: 3rem;
+}
+
+/* form */
+/* section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  } */
+
+/* h2 {
+    text-align: center;
+    color: #333;
+  } */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+}
+
+input,
+textarea {
+  margin-left: 39rem;
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 20%;
+  margin-left: 39rem;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.tampil-ulasan .ulasan-item {
+  text-align: center;
+  width: 20%;
+  margin-bottom: 15px;
+  margin-left: 39rem;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  margin: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #f39c12;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #f39c12;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* media query */
+
+/* laptop */
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-navi {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #038dc4;
+    width: 30rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-navi.active {
+    right: 0;
+  }
+
+  .navbar .navbar-navi a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-navi a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-navi a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
